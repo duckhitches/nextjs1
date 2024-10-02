@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import { Suspense }from "react"
 
-import Loading from "@/components/loading";
+import "./globals.css";
+
+
+
 
 
 export const metadata: Metadata = {

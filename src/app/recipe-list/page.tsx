@@ -1,8 +1,7 @@
 'use server'
 
-import { InstructionDrawer } from "@/components/drawer-demo/page";
 import RecipeList from "@/components/recipe-list";
-import { error } from "console";
+
 
 
 async function fetchListOfRecipes(){
@@ -23,7 +22,7 @@ async function fetchInstructions(){
         return data?.recipes;
 
     }catch(e){
-        throw new Error() ;
+        throw new Error(e) ;
     }
 }
 

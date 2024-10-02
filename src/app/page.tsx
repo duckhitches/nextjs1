@@ -3,11 +3,9 @@
 import { Button_v5 } from "@/components/button/page";
 import { BlurIn, GradualSpacing } from "@/components/welcome-page/page";
 import { IoSend } from "react-icons/io5";
-import { useRouter } from "next/compat/router";
-import { useState } from "react";
-import { useEffect } from "react";
+
 import Link from "next/link";
-import RecipeList from "@/components/recipe-list";
+
 
 
 export default function Home() {
