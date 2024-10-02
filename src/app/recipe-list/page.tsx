@@ -11,7 +11,7 @@ async function fetchListOfRecipes(){
         return data?.recipes;
 
     }catch(e){
-        throw new Error() ;
+        console.error("Failed to fetch data:", e);
     }
 }
 
