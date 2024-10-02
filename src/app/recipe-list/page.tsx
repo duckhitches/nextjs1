@@ -15,16 +15,16 @@ async function fetchListOfRecipes(){
     }
 }
 
-async function fetchInstructions(){
-    try{
-        const apiResponse = await fetch("https://dummyjson.com/recipes")
-        const data = await apiResponse.json();
-        return data?.recipes;
+// async function fetchInstructions(){
+//     try{
+//         const apiResponse = await fetch("https://dummyjson.com/recipes")
+//         const data = await apiResponse.json();
+//         return data?.recipes;
 
-    }catch(e){
-        throw new Error(e) ;
-    }
-}
+//     }catch(e){
+//         throw new Error(e) ;
+//     }
+// }
 
 
 export default async function Recipes(){

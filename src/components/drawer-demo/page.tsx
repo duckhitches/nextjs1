@@ -26,8 +26,9 @@ export function InstructionDrawer({ recipeId }: { recipeId: string }) {
       const apiResponse = await fetch(`https://dummyjson.com/recipes/${recipeId}`);
       const data = await apiResponse.json();
       setInstructions(data.instructions); // Assuming 'instructions' is the correct key
-    } catch (err) {
-      setError("Failed to fetch instructions.");
+    // } catch (err) {
+    //   throw new Error(err)
+      // setError("Failed to fetch instructions.");
     } finally {
       setLoading(false);
     }

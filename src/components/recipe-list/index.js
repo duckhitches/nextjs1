@@ -2,10 +2,7 @@
 import {
     Card,
     CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
+   
 } from "@/components/ui/card"
 import Link from "next/link"
 import { TextFade } from "../welcome-page/page"
@@ -60,7 +57,7 @@ export default async function RecipeList({ recipeList }) {
                     recipeList && recipeList.length > 0
                         ? recipeList.map((recipe) => (
                             // <Link href={`/recipe-list/${recipe.id}`}  >
-                            <HoverCard>
+                            <HoverCard key={recipe.id}>
                                 <HoverCardTrigger asChild>
                                     <div>
                                         <Card>

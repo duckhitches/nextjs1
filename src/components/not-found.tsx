@@ -1,7 +1,7 @@
 'use server'
 
 import { Button } from "@mui/base";
-import { div } from "framer-motion/client";
+
 
 
 export default function NotFound(){
