@@ -33,7 +33,7 @@ import { Button_v2 } from "../button/page"
 export default async function RecipeList({ recipeList }) {
     console.log(recipeList)
     return (
-        <div className="p-4 mx-auto lg:mx-w-8xl md:max-w-6xl sm:max-w-full bg-slate-400">
+        <div className="p-5 mx-auto lg:mx-w-8xl md:max-w-6xl sm:max-w-2xl bg-slate-400">
             
             <div>
                 <div><Link href="/"><Button_v2 className="font-mono rounded-md p-2">Go back</Button_v2></Link></div>
