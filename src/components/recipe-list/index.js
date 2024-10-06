@@ -2,7 +2,7 @@
 import {
     Card,
     CardContent,
-   
+
 } from "@/components/ui/card"
 import Link from "next/link"
 import { TextFade } from "../welcome-page/page"
@@ -30,28 +30,29 @@ import { Button_v2 } from "../button/page"
 
 
 
+
 export default async function RecipeList({ recipeList }) {
     console.log(recipeList)
     return (
-        <div className="p-5 mx-auto lg:mx-w-8xl md:max-w-6xl sm:max-w-2xl bg-slate-400">
-            
+        <div className="p-5 mx-auto lg:mx-w-8xl md:max-w-6xl sm:max-w-full bg-slate-400">
+
             <div>
                 <div><Link href="/"><Button_v2 className="font-mono rounded-md p-2">Go back</Button_v2></Link></div>
-            <TextFade
-                direction="up"
-                className="pt-0 pb-5 flex-col flex justify-center items-center space-y-0"
-            >
+                <TextFade
+                    direction="up"
+                    className="pt-0 pb-5 flex-col flex justify-center items-center space-y-0"
+                >
 
-                <h2 className="text-xl text-center sm:text-4xl font-mono font-bold tracking-tight md:text-6xl md:leading-[0rem] prose-h2:my-0 mt-20 mb-20">
-                    Types of Recipes available
-                </h2>
+                    <h2 className="text-xl text-center sm:text-4xl font-mono font-bold tracking-tight md:text-4xl md:leading-[0rem] prose-h2:my-0 mt-20 mb-20">
+                        Types of Recipes available
+                    </h2>
 
-            </TextFade>
+                </TextFade>
 
             </div>
-            
-           
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
                 {
                     recipeList && recipeList.length > 0
@@ -61,14 +62,18 @@ export default async function RecipeList({ recipeList }) {
                                 <HoverCardTrigger asChild>
                                     <div>
                                         <Card>
-                                            <CardContent className="rounded-lg dark:bg-zinc-950 bg-zinc-50 overflow-hidden p-2 border pb-3 shadow-2xl cursor-pointer hover:scale-[1.1] transition-all">
-                                                <div className="w-full aspect-w-16 aspect-h-8 lg:h-18">
+                                            <CardContent className="rounded-lg dark:bg-zinc-950 bg-zinc-50 overflow-hidden p-2 border pb-3 shadow-2xl  cursor-pointer sm:hover:scale-[0.6] md:hover:scale-[0.9] lg:hover:scale-[1.1] transition-all">
+                                               
+                                                <div className="w-full aspect-w-16 aspect-h-8 lg:h-18 relative">
                                                     <img
                                                         src={recipe.image}
                                                         alt={recipe.name}
-                                                        className="w-full h-full object-cover object-top rounded-md shadow-2xl"
+                                                        className="object-cover object-top rounded-md shadow-2xl"
+
+                                                        
                                                     />
                                                 </div>
+
                                                 <div>
                                                     <h3 className="text-gray-800 font-bold font-mono text:size-lg mt-5">{recipe.name}</h3>
                                                 </div>
