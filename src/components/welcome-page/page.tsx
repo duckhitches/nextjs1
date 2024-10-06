@@ -17,7 +17,7 @@ export function GradualSpacing({ text = 'Gradual Spacing' }: { text: string }) {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             exit="hidden"
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="text-2xl font-mono shadow-xl text-center sm:leading-[2rem] font-bold mt-20 mb-20 tracking-tighter md:text-6xl md:leading-[4rem]"
+            className="text-2xl font-mono shadow-xl text-center sm:text-2xl font-bold mt-20 mb-20 tracking-tighter md:text-6xl md:leading-[4rem]"
           >
             {char === ' ' ? <span>&nbsp;</span> : char}
           </motion.p>
